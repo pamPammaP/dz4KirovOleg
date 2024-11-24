@@ -1,18 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        // Создаём ObservableStringBuilder
-        ObservableStringBuilder observableStringBuilder = new ObservableStringBuilder("Hello");
 
-        // Добавляем наблюдателя
-        observableStringBuilder.addChangeListener(newState -> {
+        StringBuilderUs StringBuilderUs = new StringBuilderUs(" Eto nachalo");
+
+        StringBuilderUs.addWatcher(newState -> {
             System.out.println("Состояние изменено: " + newState);
         });
-
-        // Пример работы
-        observableStringBuilder.append(", world!");
-        observableStringBuilder.insert(0, "Say: ");
-        observableStringBuilder.replace(0, 4, "Shout");
-        observableStringBuilder.reverse();
-        observableStringBuilder.delete(0, 3);
+        StringBuilderUs.append(", no skoro konec");
+        StringBuilderUs.insert(0, " Escho ne skoro ");
+        StringBuilderUs.replace(0, 4, " aaa ");
+        StringBuilderUs.reverse();
+        StringBuilderUs.delete(0, 3);
     }
 }
